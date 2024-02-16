@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #171719;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        form {
+            background-color: #424a5d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-bottom: 12px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        select {
+            appearance: none;
+            background-color: #525a6e;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        span {
+            font-weight: bold;
+            color: #1e90ff;
+        }
+    </style>
+    <script src="calc.js"></script>
+</head>
+<body>
+    <form>
+        <label for="value1">Value 1:</label>
+        <input type="text" id="value1" required>
+        
+        <label for="value2">Value 2:</label>
+        <input type="text" id="value2" required>
+
+        <label for="operator">Operator:</label>
+        <select id="operator">
+            <option value="add">Add</option>
+            <option value="min">Minus</option>
+            <option value="div">Divide</option>
+            <option value="mul">Multiply</option>
+        </select>
+
+        <button type="button" onclick="calc()">Calculate</button>
+    </form>
+
+    <div>
+        <span>Result:</span>
+        <span id="result"></span>
+    </div>
+</body>
+</html>
